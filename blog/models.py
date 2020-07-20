@@ -6,6 +6,7 @@ class blog(models.Model):
     title = models.CharField(max_length=255)
     image = models.ImageField(upload_to="images/")
     body = RichTextField()
+    test = models.CharField(max_length=255)
     def __str__(self):
         return self.title
     def showcase(self):
