@@ -1,5 +1,8 @@
 from django.contrib import admin
 
 # Register your models here.
+from django_summernote.admin import SummernoteModelAdmin
 from .models import blog
-admin.site.register(blog)
+class PostAdmin(SummernoteModelAdmin):
+	summernote_fields = ('body',)
+admin.site.register(blog, PostAdmin)

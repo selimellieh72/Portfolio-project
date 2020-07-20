@@ -27,7 +27,7 @@
           <img class="card-img-top" src="{{blog.image.url}}" alt="Card image cap">
           <div class="card-body">
             <h2 class="card-title">{{blog.title}}</h2>
-            <p class="card-text">{{blog.showcase | safe}}</p>
+            <p class="card-text">{{blog.showcase| safe}}</p>
             <a href="{%url 'detail' blog.id %}" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
