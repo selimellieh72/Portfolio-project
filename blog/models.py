@@ -1,10 +1,11 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 # Create your models here.
 class blog(models.Model):
     created = models.DateTimeField()
     title = models.CharField(max_length=255)
     image = models.ImageField(upload_to="images/")
-    body = models.TextField()
+    body = RichTextField()
     def __str__(self):
         return self.title
     def showcase(self):
