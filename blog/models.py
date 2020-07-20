@@ -11,4 +11,4 @@ class blog(models.Model):
     def showcase(self):
         return self.body[:100]
     def pretty_date(self):
-        return self.created.strftime("%b %e %Y")
+        return self.created.strftime("%B %e %Y")
