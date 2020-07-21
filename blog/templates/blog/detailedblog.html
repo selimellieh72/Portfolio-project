@@ -39,15 +39,23 @@
 
         <!-- Preview Image -->
         <p style="text-align:center;">
-        <img class="marginauto img-fluid rounded " src="{{blog.image.url}}" style="" />
+        <img class="marginauto img-fluid rounded " src="{{blog.image.url}}" alt="";>
       </p>
         <hr>
+
         <!-- Post Content -->
-        <p>{{blog.body|safe}}</p>
+
+
+        {{blog.body|safe}}<div style="clear:both;"></div>
+
+        <br/>
+        <br/>
 
     <!-- /.row -->
+
   </div>
   <!-- /.container -->
+
 </body>
 
 </html>
