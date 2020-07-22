@@ -9,7 +9,7 @@
   <br/>
   <br/>
         
-        <h1 class=" text-center my-4">Blog
+        <h1 class=" text-center my-4">{{category.tag}}
         </h1>
     <hr/>
   <!-- Page Content -->
@@ -21,7 +21,7 @@
       <div class="col-md-8">
 
 
-        {%for blog in blogs.all%}
+        {%for blog in blogs%}
         <!-- Blog Post -->
         <div class="card mb-4">
           <img class="card-img-top" src="{{blog.image.url}}" alt="Card image cap">
