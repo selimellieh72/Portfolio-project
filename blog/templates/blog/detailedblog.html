@@ -32,10 +32,11 @@
         <p style="text-align:center;">
         <img class="marginauto img-fluid rounded " src="{{blog.image.url}}" alt="";>
       </p>
-        <hr>
         {%for tag in blog.tag.all%}
         <a href= "{%url 'detailedcategory' tag.tag %}"><button type="button" class="btn btn-secondary">{{tag.tag}}</button></a>
         {%endfor%}
+        <hr>
+
         <br/>
         <!-- Post Content -->
 
