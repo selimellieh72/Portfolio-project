@@ -13,7 +13,7 @@ def detailedcategory(request, category_name):
 	try:
 		specific_category = tag.objects.get(tag = category_name)
 	except:
-		return HttpResponse(f"No category with the name '{category_name}'")
+		return HttpResponse("No category with the name '{}'".format(category_name))
 	if specific_category != None:
 		blogs = blog.objects.filter(tag = specific_category)
 		return render(request, 'blog/category.html', {'category':specific_category,'blogs':blogs})
