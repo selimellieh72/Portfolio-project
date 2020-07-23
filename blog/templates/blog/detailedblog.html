@@ -30,7 +30,7 @@
         
         <!-- Preview Image -->
         <p style="text-align:center;">
-        <img class="marginauto img-fluid rounded " src="{{blog.image.url}}" alt="";>
+        <img class="marginauto img-fluid rounded " src="{{blog.image.url}}" alt="" >
       </p>
         {%for tag in blog.tag.all%}
         <a href= "{%url 'detailedcategory' tag.tag %}"><button type="button" class="btn btn-secondary">{{tag.tag}}</button></a>
@@ -41,8 +41,7 @@
         <!-- Post Content -->
 
 
-        {{blog.body|safe}}<div style="clear:both;"></div>
-
+        {{blog.body |safe}}<div style="clear:both"></div>
         <br/>
         <br/>
 
@@ -52,6 +51,12 @@
   <!-- /.container -->
 
 </body>
-
 </html>
+<style type="text/css">
+@media only screen and (min-width: 768px){
+img {
+    width: 50% !important;
+  }
+}
+</style>
 {% endblock %}
